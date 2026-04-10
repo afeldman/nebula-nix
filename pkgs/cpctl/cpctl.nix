@@ -9,22 +9,22 @@
 let
   inherit (stdenvNoCC.hostPlatform) system;
   shaMap = {
-    x86_64-linux = "0jpbd1jnp10f237cpazrh7vm8gnifh4shdnvlq33svhxbpqg325g";
-    aarch64-linux = "14cbn55x8ghcvmqxl2zlj7r5iaz0l7v3nrrhcy487jv4ig9qgv1j";
-    x86_64-darwin = "02kyl6x5p0grvkkgvja4bhpx2dpp2xcmvnjypjymglbssjbfw18y";
-    aarch64-darwin = "1vc7v9x9l9v527pz6rypl2zq50rpmacz304hvllg1h9azdlc8njj";
+    x86_64-linux = "07l9g9fs10jnpv6fgap6x8gxf6ymrzxjfk6vscf7afyylnw1v1p2";
+    aarch64-linux = "0l4inn3w18ar7vhpkn96vnxikzfyb82r85979a1payjn3z5cgvsk";
+    x86_64-darwin = "0hwfazpsyskd083s4rahrmsaf7npp5nvm2aj17p8mgyvsgy22567";
+    aarch64-darwin = "1gphdyz29kb96c7fa70c8gcq8ld9jfl0xn6d8hg170clk66w4syx";
   };
 
   urlMap = {
-    x86_64-linux = "https://github.com/afeldman/cloud-playground/releases/download/v0.10.5/cpctl_0.10.5_linux_amd64.tar.gz";
-    aarch64-linux = "https://github.com/afeldman/cloud-playground/releases/download/v0.10.5/cpctl_0.10.5_linux_arm64.tar.gz";
-    x86_64-darwin = "https://github.com/afeldman/cloud-playground/releases/download/v0.10.5/cpctl_0.10.5_darwin_amd64.tar.gz";
-    aarch64-darwin = "https://github.com/afeldman/cloud-playground/releases/download/v0.10.5/cpctl_0.10.5_darwin_arm64.tar.gz";
+    x86_64-linux = "https://github.com/afeldman/cloud-playground/releases/download/v0.10.6/cpctl_0.10.6_linux_amd64.tar.gz";
+    aarch64-linux = "https://github.com/afeldman/cloud-playground/releases/download/v0.10.6/cpctl_0.10.6_linux_arm64.tar.gz";
+    x86_64-darwin = "https://github.com/afeldman/cloud-playground/releases/download/v0.10.6/cpctl_0.10.6_darwin_amd64.tar.gz";
+    aarch64-darwin = "https://github.com/afeldman/cloud-playground/releases/download/v0.10.6/cpctl_0.10.6_darwin_arm64.tar.gz";
   };
 in
 stdenvNoCC.mkDerivation {
   pname = "cpctl";
-  version = "0.10.5";
+  version = "0.10.6";
   src = fetchurl {
     url = urlMap.${system};
     sha256 = shaMap.${system};
