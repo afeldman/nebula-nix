@@ -12,8 +12,8 @@
         pkgs = import nixpkgs { inherit system; };
       in {
         packages = {
-          cpctl = pkgs.callPackage ./pkgs/cpctl/default.nix {};
-          default = pkgs.callPackage ./pkgs/cpctl/default.nix {};
+          cpctl = pkgs.callPackage ./pkgs/cpctl/cpctl.nix {};
+          default = pkgs.callPackage ./pkgs/cpctl/cpctl.nix {};
         };
       });
 }
